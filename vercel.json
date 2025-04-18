@@ -1,0 +1,8 @@
+{
+    "builds": [
+      {
+        "src": "mindmapfiles_updated/app.py",
+        "use": "@vercel/python"
+      }
+    ]
+  }
