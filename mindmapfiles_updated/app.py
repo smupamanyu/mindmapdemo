@@ -13,6 +13,10 @@ SUPABASE_KEY = os.getenv("SUPABASE_KEY")
 supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
 
 @app.route('/')
+def serve_index():
+    return send_from_directory(os.path.join(app.root_path, 'static'), 'index.html')
+
+@app.route('/')
 def home():
     return 'MindMap API is running 🚀'
 
